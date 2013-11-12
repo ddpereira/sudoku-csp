@@ -1,4 +1,4 @@
-'''	Author: Faheim Baccus
+'''	Author: Faheim Bacchus
 	Professor of Computer Science
 	University of Toronto
 '''	
