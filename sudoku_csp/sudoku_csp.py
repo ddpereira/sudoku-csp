@@ -1,3 +1,6 @@
+'''	Author: D. Pereira
+'''
+
 from cspbase import *
 import itertools 
 
@@ -81,28 +84,26 @@ def sudoku_enforce_gac_model_1(initial_sudoku_board):
        [0,2,0,0,8,0,1,0,0]]
        
        
-       In model_1 you should create a variable for each cell of the
+       In model_1, create a variable for each cell of the
        board, with domain equal to {1-9} if the board has a 0 at that
        position, and domain equal {i} if the board has a fixed number i
        at that cell. 
        
-       Model_1 should create BINARY CONSTRAINTS OF NOT-EQUAL between all
+       Model_1 creates BINARY CONSTRAINTS OF NOT-EQUAL between all
        relevant variables (e.g., all pairs of variables in the same
-       row), then invoke enforce_gac on those constraints. All of the
-       constraints of Model_1 MUST BE binary constraints (i.e.,
+       row), then invokes enforce_gac on those constraints. All of the
+       constraints of Model_1 are binary constraints (i.e.,
        constraints whose scope includes two and only two variables).
        
-       The ouput should have the same layout as the input: a list of
-       nine lists each representing a row of the board. However, now the
-       numbers in the positions of the input list are to be replaced by
-       LISTS which are the corresponding cell's pruned domain (current
-       domain) AFTER gac has been performed.
+       The ouput has the same layout as the input: a list of
+       nine lists each representing a row of the board. However, the
+       numbers in the positions of the input list are replaced by
+       lists which are the corresponding cell's pruned domain (current
+       domain) after gac has been performed.
        
        For example, if GAC failed to prune any values the output from
-       the above input would result in an output would be: NOTE I HAVE
-       PADDED OUT ALL OF THE LISTS WITH BLANKS SO THAT THEY LINE UP IN
-       TO COLUMNS. Python would not output this list of list in this
-       format.
+       the above input would result in an output would be: NOTE python 
+	   could not output this list of lists in the intended padded format...
        
        
        [[[1,2,3,4,5,6,7,8,9],[1,2,3,4,5,6,7,8,9],[                2],[1,2,3,4,5,6,7,8,9],[                9],[1,2,3,4,5,6,7,8,9],[1,2,3,4,5,6,7,8,9],[                6],[1,2,3,4,5,6,7,8,9]],
@@ -201,7 +202,7 @@ def sudoku_enforce_gac_model_2(initial_sudoku_board):
     of binary non-equals constaints model_2 has 27 all-different
     constraints: all-different constraints for the variables in each
     of the 9 rows, 9 columns, and 9 sub-squares. Each of these
-    constraints is over 9-variables (some of these variables will have
+    constraints is over 9-variables (some of these variables have
     a single value in their domain). model_2 should create these
     all-different constraints between the relevant variables, then
     invoke enforce_gac on those constraints.
