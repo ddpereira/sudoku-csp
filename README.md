@@ -45,7 +45,7 @@ all-different constraints between the relevant variables, then
 invoke enforce_gac* on those constraints.
 	
 
-* GAC: A variable x is generalized arc consistent (GAC) with a 
+*GAC: A variable x is generalized arc consistent (GAC) with a 
 constraint if every value of the variable can be extended to 
 all the other variables of the constraint in such a way the 
 constraint is satisfied
